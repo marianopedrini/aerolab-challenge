@@ -1,0 +1,19 @@
+.reedem-button {
+  width: 228px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background: #ffffff;
+  cursor: pointer;
+
+  font-size: 18px;
+  color: #616161;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: #f3f3f3;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  }
+}

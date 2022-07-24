@@ -1,0 +1,16 @@
+.banner {
+  height: 412px;
+  width: 100%;
+  background-position: right center;
+  background-size: cover;
+  .banner__body {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 48px 0;
+    .banner__title {
+      font-size: 64px;
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.navbar {
+  background: #ffffff;
+  height: 80px;
+  padding: 16px 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  gap: 18px;
+  li {
+    display: flex;
+    align-items: center;
+  }
+}
+.navbar__user {
+  color: #616161;
+  font-size: 24px;
+  line-height: 48px;
+}
+.navbar__points {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #ededed;
+  border-radius: 100px;
+  height: 48px;
+  padding: 0 12px;
+  p {
+    color: #616161;
+    font-size: 24px;
+    line-height: 48px;
+  }
+  img {
+    height: 28px;
+  }
+}
