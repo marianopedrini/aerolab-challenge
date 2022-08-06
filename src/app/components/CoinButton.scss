@@ -1,0 +1,21 @@
+.amount-button {
+  background: #ededed;
+  border-radius: 100px;
+  width: 100px;
+  padding: 10px 30px;
+  color: #ff7800;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.1s ease-in-out;
+  user-select: none;
+
+  &:hover {
+    background-color: #ff7800;
+    color: white;
+  }
+  &:active {
+    background-color: #ff7800;
+  }
+}

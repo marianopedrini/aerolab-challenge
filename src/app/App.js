@@ -28,12 +28,6 @@ function App() {
     getData();
   }, []);
 
-  // const override = {
-  //   display: 'block',
-  //   margin: '0 auto',
-  //   borderColor: 'red',
-  // };
-
   return (
     <>
       {loading ? (
@@ -46,7 +40,7 @@ function App() {
           />
         </div>
       ) : (
-        <div className="App">
+        <div>
           <UserContext.Provider value={{ user, setUser }}>
             <ProductsContext.Provider value={{ products, setProducts }}>
               <NavBar />

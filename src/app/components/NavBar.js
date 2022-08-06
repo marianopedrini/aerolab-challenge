@@ -11,18 +11,20 @@ const NavBar = () => {
 
   return (
     <nav className="navbar">
-      <Link to="/" className="navbar__logo">
-        <img src={logo} alt="Logo" />
-      </Link>
-      <ul className="navbar__menu">
-        <li className="navbar__user">
-          <Link to="/user">{<p>{user.name}</p>}</Link>
-        </li>
-        <li className="navbar__points">
-          <p>{user.points}</p>
-          <img src={coin} alt="coin" />
-        </li>
-      </ul>
+      <div className="navbar__container">
+        <Link to="/" className="navbar__logo">
+          <img src={logo} alt="Logo" />
+        </Link>
+        <ul className="navbar__menu">
+          <li className="navbar__user">
+            <Link to="/user">{<p>{user.name}</p>}</Link>
+          </li>
+          <li className="navbar__points">
+            <p>{user.points}</p>
+            <img src={coin} alt="coin" />
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };

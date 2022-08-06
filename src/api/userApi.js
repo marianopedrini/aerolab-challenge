@@ -1,24 +1,50 @@
 import axios from 'axios';
 
-const token =
+const TOKEN =
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjZjYjhiMjYxNzY1NzAwMWFiYzAzYzQiLCJpYXQiOjE2NTEyOTIzMzh9.c_WT-z32YrBflCBmQjOow5Z1at1LdVLl-ISvDFtGndQ';
 
 const userApi = {
   getInfo: () => {
-    const url = 'https://coding-challenge-api.aerolab.co/user/me';
+    const URL = 'https://coding-challenge-api.aerolab.co/user/me';
     const config = {
+      method: 'get',
+      url: URL,
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${TOKEN}`,
+        'Content-Type': 'application/json',
       },
     };
-    console.log('getting users');
-    return axios.get(url, config);
+    return axios(URL, config);
   },
-  addPoints: () => {
-    axios.post();
+  addPoints: (amount) => {
+    const URL = 'https://coding-challenge-api.aerolab.co/user/points';
+    const data = {
+      amount: amount,
+    };
+
+    const config = {
+      method: 'post',
+      url: URL,
+      headers: {
+        Authorization: `Bearer ${TOKEN}`,
+        'Content-Type': 'application/json',
+      },
+      data: data,
+    };
+    return axios(config);
   },
   getHistory: () => {
-    axios.get();
+    const URL = 'https://coding-challenge-api.aerolab.co/user/history';
+
+    const config = {
+      method: 'get',
+      url: URL,
+      headers: {
+        Authorization: `Bearer ${TOKEN}`,
+        'Content-Type': 'application/json',
+      },
+    };
+    return axios(config);
   },
 };
 

@@ -1,21 +1,35 @@
 import axios from 'axios';
 
-const token =
+const TOKEN =
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjZjYjhiMjYxNzY1NzAwMWFiYzAzYzQiLCJpYXQiOjE2NTEyOTIzMzh9.c_WT-z32YrBflCBmQjOow5Z1at1LdVLl-ISvDFtGndQ';
 
 const productApi = {
   getInfo: () => {
-    const url = 'https://coding-challenge-api.aerolab.co/products';
+    const URL = 'https://coding-challenge-api.aerolab.co/products';
     const config = {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${TOKEN}`,
       },
     };
     console.log('getting products');
-    return axios.get(url, config);
+    return axios.get(URL, config);
   },
-  addPoints: () => {
-    axios.post();
+  buyProduct: (productId) => {
+    const URL = 'https://coding-challenge-api.aerolab.co/redeem';
+    const data = {
+      productId: productId,
+    };
+    const config = {
+      method: 'post',
+      url: URL,
+      headers: {
+        Authorization: `Bearer ${TOKEN}`,
+        'Content-Type': 'application/json',
+      },
+      data: data,
+    };
+    console.log(config);
+    return axios(config);
   },
   getHistory: () => {
     axios.get();

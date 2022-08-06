@@ -1,0 +1,51 @@
+.profile__container {
+  background-color: #ffffff;
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  .profile__user-data {
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-size: 22px;
+      .coin-icon {
+        margin-left: 5px;
+        margin-bottom: -10px;
+      }
+    }
+    span {
+      color: #ff7800;
+      font-weight: bold;
+    }
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  hr {
+    margin: 20px 0 40px;
+    opacity: 0.2;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .coins-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  @media screen and (max-width: 576px) {
+    padding: 20px 40px;
+    .profile__user-data {
+      align-items: center;
+    }
+  }
+}

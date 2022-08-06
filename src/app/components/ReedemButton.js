@@ -1,5 +1,12 @@
 import './ReedemButton.scss';
 
-export const ReedemButton = () => {
-  return <div className="reedem-button">Reedem now</div>;
+export const ReedemButton = ({ text, buyable, handleBuy }) => {
+  return (
+    <div
+      className={`reedem-button ${buyable ? '' : 'disabledBtn'}`}
+      onClick={handleBuy}
+    >
+      {text}
+    </div>
+  );
 };

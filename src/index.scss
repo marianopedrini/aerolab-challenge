@@ -19,6 +19,15 @@ a {
 .container {
   max-width: 1176px;
   margin: auto;
+  @media screen and (max-width: 1200px) {
+    max-width: 90%;
+  }
+  @media screen and (max-width: 992px) {
+  }
+  @media screen and (max-width: 768px) {
+  }
+  @media screen and (max-width: 576px) {
+  }
 }
 
 .loader__container {

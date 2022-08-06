@@ -13,4 +13,8 @@
       color: #ffffff;
     }
   }
+  @media screen and (max-width: 576px) {
+    background-position-x: 445px;
+    height: 300px;
+  }
 }
