@@ -19,10 +19,10 @@ const NavBar = () => {
           <li className="navbar__user">
             <Link to="/user">{<p>{user.name}</p>}</Link>
           </li>
-          <li className="navbar__points">
+          <Link className="navbar__points" to="/user">
             <p>{user.points}</p>
             <img src={coin} alt="coin" />
-          </li>
+          </Link>
         </ul>
       </div>
     </nav>

@@ -1,0 +1,19 @@
+.sort__button {
+  background: #ededed;
+  border-radius: 100px;
+  padding: 0 24px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+    background: #dfdfdf;
+  }
+  &.active {
+    background: #0ad4fa;
+    color: white;
+    &:hover {
+      background: #0ad4fa;
+    }
+  }
+}

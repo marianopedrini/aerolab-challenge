@@ -13,7 +13,7 @@ import PropagateLoader from 'react-spinners/PropagateLoader';
 
 function App() {
   const [user, setUser] = useState(null);
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ function App() {
 
       setTimeout(() => {
         setLoading(false);
-      }, 3000);
+      }, 1000);
     };
     getData();
   }, []);
@@ -32,12 +32,7 @@ function App() {
     <>
       {loading ? (
         <div className="loader__container">
-          <PropagateLoader
-            color={'#FF7800'}
-            loading={loading}
-            // cssOverride={override}
-            size={30}
-          />
+          <PropagateLoader color={'#FF7800'} loading={loading} size={30} />
         </div>
       ) : (
         <div>

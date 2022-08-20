@@ -17,5 +17,7 @@
   }
   &:active {
     background-color: #ff7800;
+    color: white;
+    transform: translateY(2px);
   }
 }

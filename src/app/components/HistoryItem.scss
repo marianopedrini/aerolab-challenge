@@ -1,3 +1,23 @@
 .history__item {
-  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+  transition: all 0.1s ease-in-out;
+  .history-item__left-data {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+      max-width: 100px;
+    }
+  }
+  &:not(:last-child) {
+    border-bottom: 1px solid #e6e6e6;
+  }
+  &:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    // transform: scale(1.01);
+    transform: translateY(-2px);
+  }
 }

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { UserContext } from '../contexts/UserContext';
 import userApi from '../../api/userApi';
 
@@ -6,24 +6,12 @@ import { CoinButton } from './CoinButton';
 
 import './UserProfile.scss';
 import coin from '../../assets/icons/coin.svg';
-import { HistoryItem } from './HistoryItem';
+import { HistoryList } from './HistoryList';
 
 const amounts = [1000, 5000, 7500];
 
 export const UserProfile = () => {
   const { user, setUser } = useContext(UserContext);
-  const [history, setHistory] = useState([]);
-
-  useEffect(() => {
-    try {
-      const getHistoryData = async () => {
-        await userApi.getHistory().then((data) => setHistory(data.data));
-      };
-      getHistoryData();
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
 
   const handleAddPoints = async (amount) => {
     try {
@@ -60,10 +48,7 @@ export const UserProfile = () => {
         ))}
       </div>
 
-      <h2>History</h2>
-      {history.map((eachHistory) => {
-        return <HistoryItem data={eachHistory} />;
-      })}
+      <HistoryList />
     </div>
   );
 };
